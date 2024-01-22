@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import "./App.css"
 
 const ToDo = () => {
   const [toDoData, setToDoData] = useState({
@@ -28,9 +29,11 @@ const ToDo = () => {
     }
   };
   return (
-    <>
-      <h1 style={{ color: "red" }}>ToDo list</h1>
-      <form onSubmit={addToDo}>
+    <div className="app">
+      <div className="container">
+        
+        <h1>ToDo list</h1>
+        <form onSubmit={addToDo}>
         <div>
           <input
             type="text"
@@ -52,7 +55,8 @@ const ToDo = () => {
         </div>
         <div>{message === true && <p>To Do item added in the list</p>}</div>
       </form>
-    </>
+      </div>
+      </div>
   );
 };
 

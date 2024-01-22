@@ -34,16 +34,22 @@ function App() {
 
   return (
     <div style={{ textAlign: "center" }}>
+    <div className="container">
       <ToDo />
-      <div>
+      
+      <div >
         {todo.map((item: any, id: number) => (
-          <div key={id}>
+          
+          <div className="" >
+            <div  key={id}>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
             <button onClick={() => deleteToDo(item._id)}>Completed Task</button>
           </div>
+          </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }
